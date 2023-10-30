@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+{% block ContenidoVariable %}
+<h1>Libros leidos</h1>
+{% if leidos_formulario.errors %}
+<p style="color: red">Datos incorrectos, verificar</p>
+{% endif %}
+<form action="/leidos/" method="post">{% csrf_token %}
+    <p>Titulo del libro: <input type="text" name="titulo">
+    <p>Autor del libro: <input type="text" name="autor">
+    <p>Año de publicación: <input type="text" name="año_publicacion">
+    <input type="submit" value="Registrar">
+    </p>
+</form>
+{% endblock ContenidoVariable %}
