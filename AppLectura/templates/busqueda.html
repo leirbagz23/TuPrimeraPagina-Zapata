@@ -1,4 +1,14 @@
 {% extends 'index.html' %}
 {% block ContenidoVariable %}
-<h1>Formulario de busqueda</h1>
+<h1>Búsqueda en la base de datos</h1>
+{% if leidos_formulario.errors %}
+<p style="color: red">Datos incorrectos, verificar</p>
+{% endif %}
+<form action="/resultado/" method="get">
+    <p>Titulo del libro: <input type="text" name="titulo">
+    <p>Autor: <input type="text" name="autor">
+    <p>Año de publicación: <input type="number" name="año_publicacion"> 
+    <input type="submit" value="Buscar">
+    </p>
+</form>
 {% endblock ContenidoVariable %}

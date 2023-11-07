@@ -1,4 +1,21 @@
 {% extends 'index.html' %}
 {% block ContenidoVariable %}
-<h1>Inicio</h1>
+<h1>Cantidad de libros leidos: {{leidos|length}} </h1>
+<ul>
+    {% for libro in leidos %}
+        <li>Título: {{libro.titulo}} - Autor: {{libro.autor}} - Año de publicación: {{libro.año_publicacion}}</li>
+    {% endfor %}
+</ul>
+<h1>Cantidad de libros actualmente leyendo: {{leyendo|length}} </h1>
+<ul>
+    {% for libro in leyendo %}
+        <li>Título: {{libro.titulo}} - Autor: {{libro.autor}} - Año de publicación: {{libro.año_publicacion}}</li>
+    {% endfor %}
+</ul>
+<h1>Cantidad de libros por leer: {{por_leer|length}} </h1>
+<ul>
+    {% for libro in por_leer %}
+        <li>Título: {{libro.titulo}} - Autor: {{libro.autor}} - Año de publicación: {{libro.año_publicacion}}</li>
+    {% endfor %}
+</ul>
 {% endblock ContenidoVariable %}

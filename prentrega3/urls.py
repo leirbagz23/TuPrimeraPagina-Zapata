@@ -16,8 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from AppLectura.views import leidos,por_leer,leyendo,home,busqueda
+from AppLectura.views import leidos,por_leer,leyendo,home,busqueda,resultado_busqueda
 
 urlpatterns = [
-    path('admin/', admin.site.urls), path('leidos/',leidos,name='leidos'), path('porleer/',por_leer,name='porleer'), path('leyendo/',leyendo,name='leyendo'), path('home/',home,name='home'), path('busqueda/',busqueda,name='busqueda')
+    path('admin/', admin.site.urls), path('leidos/',leidos,name='leidos'), path('porleer/',por_leer,name='porleer'), path('leyendo/',leyendo,name='leyendo'), path('home/',home,name='home'), path('busqueda/',busqueda,name='busqueda'), path('resultado/',resultado_busqueda,name='resultado')
 ]
